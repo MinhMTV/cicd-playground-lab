@@ -1,0 +1,15 @@
+{
+  "name": "cicd-playground-lab",
+  "version": "0.1.0",
+  "description": "Hands-on CI/CD learning project with GitHub Actions",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "lint": "node --check src/index.js",
+    "test": "node --test",
+    "build": "mkdir -p dist && cp src/index.js dist/index.js && cp README.md dist/README.md"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

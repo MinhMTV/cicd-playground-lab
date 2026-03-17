@@ -1,0 +1,25 @@
+name: Release (CD simulation)
+
+on:
+  push:
+    tags:
+      - 'v*.*.*'
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci --ignore-scripts || npm i --no-audit --no-fund
+      - run: npm run build
+      - run: tar -czf cicd-playground-${GITHUB_REF_NAME}.tar.gz dist
+      - name: Create GitHub Release with artifact
+        uses: softprops/action-gh-release@v2
+        with:
+          files: cicd-playground-${{ github.ref_name }}.tar.gz
+          generate_release_notes: true
