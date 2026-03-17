@@ -21,6 +21,7 @@ npm start
 - Basis-App mit Tests vorhanden
 - CI-Workflow aktiv (Node 20/22 Matrix, lint/test/build + versionspezifischer Artifact Upload)
 - CD-Simulation über Git Tags (`vX.Y.Z`) erstellt GitHub Release + Tarball
+- Release-Workflow zusätzlich manuell über `workflow_dispatch` triggerbar (Lernzwecke)
 
 ## Nächste Schritte
 1. Branch Protection + Required Checks aktivieren
