@@ -37,3 +37,6 @@ npm start
 ## Sicherheits-/Kostenhinweis
 - Kein externes Deployment konfiguriert (nur GitHub-internes Release-Artefakt).
 - Geringe Laufzeitkosten durch schlanke Jobs.
+
+## Collaboration
+- See `CONTRIBUTING.md` for CI/CD learning workflow and exercises.
