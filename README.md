@@ -19,7 +19,7 @@ npm start
 
 ## Aktueller Status
 - Basis-App mit Tests vorhanden
-- CI-Workflow aktiv (lint/test/build + Artifact Upload)
+- CI-Workflow aktiv (Node 20/22 Matrix, lint/test/build + Artifact Upload)
 - CD-Simulation über Git Tags (`vX.Y.Z`) erstellt GitHub Release + Tarball
 
 ## Nächste Schritte
